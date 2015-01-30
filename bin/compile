@@ -24,7 +24,7 @@ done
 if which apt-get; then
   echo '==> Installing java environment'
   sudo apt-get update
-  sudo apt-get remove --assume-yes openjdk-*
+  sudo apt-get remove --yes --force-yes  openjdk-*
   sudo apt-get install --assume-yes openjdk-7-jre-headless
   echo '==> Elasticize'
   wget -qO - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
